@@ -1,0 +1,135 @@
+.box{
+    background: #BADA55;
+    padding: 10px 20px;
+    margin:5px;
+    display: inline-block;
+
+    &.dragging{
+        background: coral;
+    }
+
+    &.sortable.dragging{
+        background: none;
+        color: transparent;
+    }
+
+}
+
+
+//Test start
+.box1 {
+    width: 200px;
+    height: 50px;
+    background: coral;
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 10px;
+    position: relative;
+    display: inline-table;
+    
+    &.dragging{
+        background: coral;
+    }
+
+    &.sortable.dragging{
+        background: none;
+        color: transparent;
+    }
+  }
+  
+  .box1 span {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .box1:before,
+  .box1:after {
+    content: '';
+    position: absolute;
+  }
+  
+  .box1:after {
+    border-left: 25px solid tomato;
+    border-right: 25px solid transparent;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    right: -50px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    display: block;
+  }
+  
+  .box1:before {
+    border-left: 26px solid white;
+    border-right: 26px solid transparent;
+    border-top: 26px solid transparent;
+    border-bottom: 26px solid transparent;
+    left: 0px;
+    top: -1px;
+    width: 0;
+    height: 0;
+    display: block;
+  }
+//Test End
+
+.area{
+   /* background: #C0FFEE;*/
+    padding: 40px;
+}
+
+button{
+    margin-top:20px;
+}
+
+.dragbox{
+    display: inline-flex;
+    margin:0;
+    padding:0;
+    flex-direction: column;
+
+    &.vertical{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+.dropzone{
+    padding:20px;
+    margin:20px 0;
+    width:100%;
+    height: auto;
+    min-height: 400px;
+    border: 1px solid #bfbfbf;
+
+    &.dropzone-activated{
+        border: 1px solid #3b4fbc;
+    }
+
+    &.dropzone-entered {
+        background-color: #efefef;
+    }
+
+    &.dotted{
+        padding: 2.25em 1.6875em;
+        background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+        background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+        background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+        background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+        -webkit-background-size: 10px 10px;
+        -moz-background-size: 10px 10px;
+        background-size: 10px 10px;
+    }
+}
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-chip {
+    max-width: 50px;
+  }

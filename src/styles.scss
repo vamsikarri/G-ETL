@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/cdk/overlay";
+@include cdk-overlay();
+
+.draggable{
+    cursor: move;
+    user-select: none;
+}
+
+.movable:not(.dragging){
+    transition: transform 300ms ease-in-out;
+}
+
+.area{
+    background: #C0FFEE;
+    padding: 40px;
+}
+
+.draggable-helper-overlay{
+  pointer-events: none !important;
+}
